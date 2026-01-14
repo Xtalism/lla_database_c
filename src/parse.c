@@ -31,7 +31,7 @@ int add_employee(struct dbheader_t *dbhdr, struct employee_t **employees, char *
     if (NULL == name) return STATUS_ERROR;
 
     char *addr = strtok(NULL, ",");
-    if (NULL == name) return STATUS_ERROR;
+    if (NULL == addr) return STATUS_ERROR;
 
     char *hours = strtok(NULL, ",");
     if (NULL == hours) return STATUS_ERROR;
