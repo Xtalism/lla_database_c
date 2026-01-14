@@ -39,6 +39,7 @@ int add_employee(struct dbheader_t *dbhdr, struct employee_t **employees, char *
     struct employee_t *e = *employees;
     e = realloc(e, sizeof(struct employee_t) * dbhdr->count+1);
     if (e == NULL) {
+        free(e);
         return STATUS_ERROR;
     }
 
