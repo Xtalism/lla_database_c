@@ -10,7 +10,7 @@
 #include "common.h"
 #include "parse.h"
 
-void list_employees(struct dbheader_t *dbhdr, struct employee_t *employees) {
+int list_employees(struct dbheader_t *dbhdr, struct employee_t *employees) {
     int i = 0;
 
     if (NULL == dbhdr) return STATUS_ERROR;
@@ -51,8 +51,6 @@ int add_employee(struct dbheader_t *dbhdr, struct employee_t **employees, char *
     strncpy(e[dbhdr->count-1].address, addr, sizeof(e[dbhdr->count-1].address)-1);
 
     e[dbhdr->count-1].hours = atoi(hours);
-
-    // printf("%s %s %s\n", name, addr, hours);
 
     *employees = e;
 
