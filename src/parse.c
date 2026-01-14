@@ -95,7 +95,7 @@ int create_db_header(int fd, struct dbheader_t **headerOut) {
 
     *headerOut = header;
 
-    return STATUS_ERROR;
+    return STATUS_SUCCESS;
 }
 
 int validate_db_header(int fd, struct dbheader_t **headerOut) {
