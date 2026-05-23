@@ -5,6 +5,9 @@
 bin/*
 !bin/.gitkeep
 
+# Objects files
+!obj/.gitkeep
+
 # Prerequisites
 *.d
 
